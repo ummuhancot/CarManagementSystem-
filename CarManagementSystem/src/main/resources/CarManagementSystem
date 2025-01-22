@@ -1,0 +1,46 @@
+  Car Management System
+  A - Araba Endpoints
+  1-Araba Kaydet
+  HTTP Yöntemi: POST
+  URL: http://localhost:8080/cars
+  Tüm Arabaları Getir
+  2-HTTP Yöntemi: GET
+  URL: http://localhost:8080/cars
+  3-ID ile Araba Getir
+  HTTP Yöntemi: GET
+  URL: http://localhost:8080/cars/2
+ 4- ID ile Araba Sil
+  HTTP Yöntemi: DELETE
+  URL: http://localhost:8080/cars/2
+ 5- RequestParam Kullanarak ID ile Araba Getir
+  HTTP Yöntemi: GET
+  URL: http://localhost:8080/cars/q?id=2
+ 6- RequestParam Kullanarak Modeline Göre Araba Getir
+  HTTP Yöntemi: GET
+  URL: http://localhost:8080/cars/search?model=Toyota
+ 7- Sayfalandırma İle Arabaları Getir
+  HTTP Yöntemi: GET
+  URL: http://localhost:8080/cars/s?page=1&size=2&sort=productionYear&direction=ASC
+ 8- DTO Kullanarak Araba Güncelle
+  HTTP Yöntemi: PUT
+  URL: http://localhost:8080/cars/update/2
+ JPQL Kullanarak Sahibe Göre Araba Getir
+  HTTP Yöntemi: GET
+  URL: http://localhost:8080/cars/a?owner=John
+  Bir Sahibe Araba Ekle
+  HTTP Yöntemi: POST
+  URL: http://localhost:8080/cars/add?car=3&owner=1
+  Araba Satışı Yap
+  HTTP Yöntemi: POST
+  URL: http://localhost:8080/cars/sell?car=3&buyer=2
+  B - Sahip Endpoints
+  Sahip Kaydet
+  HTTP Yöntemi: POST
+  URL: http://localhost:8080/owners/save
+  Gönderim Formatı: JSON
+  Tüm Sahipleri Bul
+  HTTP Yöntemi: GET
+  URL: http://localhost:8080/owners
+  ID ile Sahip Bul
+  HTTP Yöntemi: GET
+  URL: http://localhost:8080/owners/2

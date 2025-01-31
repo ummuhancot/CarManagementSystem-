@@ -120,6 +120,17 @@ public class CarController {
         return ResponseEntity.ok("Arac güncellendi!");
     }
 
+    ///9--->
+    /*JPQL Kullanarak Sahibe Göre Araba Getir
+HTTP Yöntemi: GET
+URL: http://localhost:8080/cars/a?owner=John*/
+    @GetMapping("/a")
+    public ResponseEntity<List<CarDTO>> getCarsByOwner(@RequestParam(name = "name") String name , @RequestParam(name = "lastName") String lastname){
+        List<CarDTO> carDTOList = carService.filterCarByOwner(name, lastname);
+        return ResponseEntity.ok(carDTOList);
+    }
+
+
 
 
 

@@ -9,4 +9,10 @@ import java.util.List;
 @Repository
 public interface CarRepository extends JpaRepository<Car,Long> {
     List<Car> findCarByBrand(String brand);
+
+
+    ///9--->
+    List<Car> findCarByOwnerNameAndOwnerLastName(String ownerName, String ownerLastName);
+
+
 }

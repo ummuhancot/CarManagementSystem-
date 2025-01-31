@@ -1,6 +1,7 @@
 package com.tpe.service;
 
 import com.tpe.domain.Car;
+import com.tpe.domain.Owner;
 import com.tpe.dto.CarDTO;
 import com.tpe.exception.CarNotFoundException;
 import com.tpe.repository.CarRepository;
@@ -102,5 +103,17 @@ public class CarService {
     public void saveAllCar(List<Car> carList) {
         carRepository.saveAll(carList);
     }
+
+    ///9--->
+    public List<CarDTO> filterCarByOwner(
+            String name,
+            String lastname) {
+        List<Car> carList = carRepository.findCarByOwnerNameAndOwnerLastName(name, lastname);
+        return carList.stream()
+                .map(CarDTO::new)
+                .toList();
+    }
+
+
 }
 
